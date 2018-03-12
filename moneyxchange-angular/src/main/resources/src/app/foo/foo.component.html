@@ -1,0 +1,12 @@
+
+    <div class="row justify-content-md-center">
+        <div class="form-group col-sm-6">
+          <input #baseEl type="text" class="form-control" placeholder="USD">
+        </div>
+        <div class="form-group col-sm-6">
+          <input #resultEl type="text" class="form-control"  placeholder="EU" readonly>
+        </div>
+        <div class="form-group col-sm-12 text-center">
+            <button class="btn btn-primary" (click)="calculte()" type="submit">Calculate</button>
+        </div>
+      </div>

@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">MxC</a>
+    <a *ngIf="isLoggedIn" class="btn btn-default pull-right"(click)="logout()" href="#">Logout</a>
+</nav>
+  <main role="main" *ngIf="isLoggedIn">
+      <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-lg-4 text-center">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="100" height="100">
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+          <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+      </div><!-- /.container -->  
+    <section class="jumbotron text-center">
+          <div *ngIf="isLoggedIn" class="container">
+              <foo-details></foo-details>
+          </div>
+    </section>
+</main>
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+<main role="main" class="inner cover" *ngIf="!isLoggedIn">
+    <h1 class="cover-heading">Money Change.</h1>
+    <p class="lead">Example landing.</p>
+    <p class="lead">
+        <button *ngIf="!isLoggedIn" class="btn btn-primary" (click)="login()" type="submit">Login</button>
+    </p>
+  </main>
+</div>
+<footer *ngIf="isLoggedIn">
+  <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md">
+                <img class="mb-2" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" width="24" height="24">
+                <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+            </div>
+            <div class="col-3 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Cool stuff</a></li>
+                  <li><a class="text-muted" href="#">Random feature</a></li>
+                  <li><a class="text-muted" href="#">Team feature</a></li>
+                  <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                  <li><a class="text-muted" href="#">Another one</a></li>
+                  <li><a class="text-muted" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-3 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Resource</a></li>
+                  <li><a class="text-muted" href="#">Resource name</a></li>
+                  <li><a class="text-muted" href="#">Another resource</a></li>
+                  <li><a class="text-muted" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-3 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Team</a></li>
+                  <li><a class="text-muted" href="#">Locations</a></li>
+                  <li><a class="text-muted" href="#">Privacy</a></li>
+                  <li><a class="text-muted" href="#">Terms</a></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+  </div>
+  </footer>
