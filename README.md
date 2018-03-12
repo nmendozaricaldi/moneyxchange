@@ -1,5 +1,5 @@
 # moneyxchange
-cambio de divisas
+Currency Exchange
 
 ## Build the Project
 ```
